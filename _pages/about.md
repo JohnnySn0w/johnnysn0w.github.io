@@ -4,26 +4,43 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+Hello there! I'm Winter, and I hope you're enjoying my webbed site.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+I'm a person (as far as I can tell) and I seem to enjoy doing some things. 
+These are include but are not limited to:
 
-## Features
+- computer programming ✨
+- learning about woo stuff 🔮
+- touching moss 🍀
+- connecting with art 🎭
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
+### More Information
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+My background is certainly a thing.
+
+#### Academics
+B.Sc, M.Sc - Computer Science
+(*I like da blinkenlights*)
+
+Aside from the pieces of paper, I have spent most of my life Online, and am very well-versed in memes, internet subcultures, conspiracy theories, and all 
+other elements of being exposed to the fount of human detritus.
+
+From a young age I have been aware my mind holds information at an astonishing rate and is able to apply it similarly. This has been used for many ends, not all of which were desired and/nor good.
+
+#### Religion
+Decidedly not an atheist, not elaborating for now.
+
+#### Formative and Traumatic experiences
+Yeah had a few of those, still working that out.
+
+### if you want to send me things
+My deepest most unobvious fascination is little indie games on http://itch.io that talk about someone's life experience. Stuff that's deeply real and personal in a way no other production of game can be.
+
+I also like learning about all forms of mysticism, as long as they don't veer into what I would call "mystical escapist world building"
+
+I also like computer history! a lot! it's an old romance for me.
+
+### Contact me
+You can drop me an electronic message. This is also the subset of communication most likely to make it to me.
+
+Email: [winter@snowis.me](mailto:winter@snowis.me)
