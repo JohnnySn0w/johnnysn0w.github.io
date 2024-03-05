@@ -1,6 +1,6 @@
 ---
 layout: post
-title: upcoming things
+title: upcoming
 categories: [Miscellaneous]
 ---
 
