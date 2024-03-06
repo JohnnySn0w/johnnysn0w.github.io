@@ -12,15 +12,18 @@ Yesterday I was scrolling my masto feed, when I spotted [a very interesting boos
 
 Yes, the user posting it had gone through and scraped the Geocities backup for all of the 88x31pixel banners that were contained therein, and uploaded a sort of museum webpage, hosting all of them. They even did me the favor of posting a link to the de-duplicated zip file. Tiny at ~150MB, considering it holds almost 30,000 files.
 
-That, in combination with a Youtube video I recently keyed onto, about the [creator's love of really obscure art](https://www.youtube.com/watch?v=d_n_gmINZTI), inspired me to try and do something, well, artsy! I too absolutely adore the way that some artists really dig into, trying to make art that is not only expressive, but is so on multiple levels, and isn't afraid to transgress socially acceptable aesthetics to make something that really evokes the kind of vibe they're going for. I mention in my About page, I love niche indies that speak to a specific person's life experience. I love art that is so very much about itself and nothing else.
+That, in combination with a Youtube video I recently keyed onto, about the [creator's love of really obscure art](https://www.youtube.com/watch?v=d_n_gmINZTI), inspired me to try and do something, well, artsy! I too absolutely adore the way that some artists really dig into, trying to make art that is not only expressive, but is so on multiple levels, and isn't afraid to transgress socially acceptable aesthetics to make something that really evokes the kind of vibe they're going for. I mention in my About page, I love niche indies that speak to a specific person's life experience. I love art that is so very much about itself and staying true to that.
 
 Taking inspiration from maximalist ideas, and the general vibe of early internet aesthetics, I spent the entirety of yesterday—sans the runtime of The Beautiful Bones, which I watched with a friend—working on this project! that's 9am-8pmish. 
 
 Being unemployed has perks, ahaha
 
-So yeah! The project was almost fully formed but here's the gist:
+So yeah! The project was almost fully formed but here's the gist I sent to a friend:
 
 ![[Pasted image 20240306151532.png]]
+
+Let me be more concise though:
+>For any given input image, convert each single pixel of that image into a RGB value, and swap it with a 88x31px banner whose RGB color mean is nearest that value.
 
 Now, I later found that using small sites for cdn, is:
 
@@ -51,4 +54,5 @@ Here's the nitty gritty of the technical:
 
 One of the more interesting aspects of parsing all these files, was finding that some of them are zip bombs, in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS = 1000000000` value too high. Basically, the library I used to parse the images, Pillow, has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
 
-I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES = True`, as otherwise some of the banners wouldn't be parsed. This is an interesting side effect of the optimizations various programs would use in the era, to optimize for size. 
+I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES = True`, as otherwise some of the banners wouldn't be parsed. This is an interesting side effect of the optimizations various programs would use in the era, to optimize for size. Unfortunately, I have yet to find a solution to all of the various curveballs these optimizations are throwing me. Lots of out-of-bounds errors when copying individual frames for final video composition.
+
