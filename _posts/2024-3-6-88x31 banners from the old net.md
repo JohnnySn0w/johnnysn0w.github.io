@@ -20,3 +20,9 @@ Being unemployed has perks, ahaha
 
 So yeah! The project was almost fully formed but here's the gist:
 
+![[Pasted image 20240306151532.png]]
+
+Now, I later found that using small sites for cdn, is:
+
+1. Known as hot linking, and is very frowned upon
+2. Not as much of a crime if you're using  a
