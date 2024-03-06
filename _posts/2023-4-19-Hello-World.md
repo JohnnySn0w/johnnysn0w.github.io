@@ -1,7 +1,9 @@
 ---
 layout: post
 title: AHHHHHH ITTS ALIFE
-categories: [Miscellaneous]
+categories:
+  - Miscellaneous
+  - Goof
 ---
 I havee made da blog
 
