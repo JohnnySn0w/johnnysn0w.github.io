@@ -11,16 +11,6 @@
             "id": "193f0e84cf44be9f",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "assets/Pasted image 20240306151927.png"
-              }
-            }
-          },
-          {
-            "id": "7e67788f68021eb6",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
                 "file": "_posts/2024-3-6-88x31 banners from the old net.md",
@@ -28,9 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7e67788f68021eb6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "assets/banner.gif"
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,9 +156,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7e67788f68021eb6",
+  "active": "193f0e84cf44be9f",
   "lastOpenFiles": [
-    "assets/_hearts4_main_theq-fm.gif",
+    "assets/Pasted image 20240306151927.png",
+    "assets/banner.gif",
     "_posts/2024-3-6-88x31 banners from the old net.md",
     "_posts/2024-3-4-upcoming-things.md",
     "_posts/2023-5-2-polymath.md",
@@ -176,7 +176,6 @@
     "images/mobile-demo.png",
     "images/categories.png",
     "images/404.jpg",
-    "images/search.png",
-    "images/reverie-demo.png"
+    "images/search.png"
   ]
 }
