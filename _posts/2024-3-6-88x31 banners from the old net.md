@@ -75,9 +75,8 @@ The input image:
 
 
 The output video:
-![](/assets/output_video.mp4)
 
-
+<video width="100%" height="auto" controls><source src="https://raw.githubusercontent.com/JohnnySn0w/8831-collager/main/output_video.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
 Closing thoughts
 - Might finagle alpha channel back in. I just wanted to simplify things for the first go. There are some pretty heavily transparent banners, so they're certainly available for the palette.
 - I half wanted to dive into computational shader development for this. I still might, that would go under Future Work though.
