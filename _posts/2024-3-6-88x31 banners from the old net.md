@@ -22,7 +22,7 @@ I will be very clear, in that I was fairly heavily assisted by the Robot in this
 
 So yeah! The project was almost fully formed but here's the gist I sent to a friend:
 
-![me gisting in discord](Pasted%20image%2020240306151532.png)
+![me gisting in discord](/assets/Pasted%20image%2020240306151532.png)
 
 Let me be more concise though:
 >For any given input image, convert each single pixel of that image into a RGB value, and swap it with a 88x31px banner whose RGB color mean is nearest that value.
@@ -37,7 +37,7 @@ And also, I eventually realized the sheer magnitude of the task, computationally
 This would not be something one could throw a web app together for, and expect to be able to dynamically render on a webpage. That was my first idea for the end product, you see.
 
 No, even if I just run this process for one single image, say, one of the static 88x31 buttons, it takes up a bit of space in a number of ways, as seen in the stats for the final product:
-![final video dimensions](Pasted%20image%2020240306151927.png)
+![final video dimensions](/assets/Pasted%20image%2020240306151927.png)
 that is a big video! (but actually just 9MB)
 
 I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes, so not near as much RAM) into one pageview
@@ -51,7 +51,7 @@ Here's the nitty gritty of the technical:
 	- For Animated banners, I take the mean of each frame, and then generate a mean of those means for the overall image.
 	- What's 'flashy'? Basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
 	- Here's an example of a 'flashy' banner
-		- ![a flashy banner](_hearts4_main_theq-fm.gif)
+		- ![a flashy banner](/assets/_hearts4_main_theq-fm.gif)
 	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the Geocities archive. That could be considered Future Work.
 
 One of the more interesting aspects of parsing all these files, was finding that some of them are [zip bombs](https://en.wikipedia.org/wiki/Zip_bomb), in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS` value too high. Basically, the library I used to parse the images, [Pillow](https://pillow.readthedocs.io/en/stable/), has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.

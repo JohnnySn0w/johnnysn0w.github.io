@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-5-2-polymath.md",
+                "file": "_posts/2024-3-6-88x31 banners from the old net.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2023-5-2-polymath.md",
+                "file": "_posts/2024-3-6-88x31 banners from the old net.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2023-5-2-polymath.md",
+                "file": "_posts/2024-3-6-88x31 banners from the old net.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/2023-5-2-polymath.md"
+                "file": "_posts/2024-3-6-88x31 banners from the old net.md"
               }
             }
           }
@@ -159,11 +159,12 @@
   },
   "active": "7e67788f68021eb6",
   "lastOpenFiles": [
+    "_posts/2024-3-4-upcoming-things.md",
+    "_posts/2024-3-6-88x31 banners from the old net.md",
+    "_posts/2023-5-2-polymath.md",
     "_posts/2023-5-2-hmm.md",
     "_posts/2023-4-19-Hello-World.md",
     "_posts/2023-4-19-Thots.md",
-    "_posts/2024-3-4-upcoming-things.md",
-    "_posts/2023-5-2-polymath.md",
     "404.md",
     "README.md",
     "images/favicon-32x32.png",
@@ -175,7 +176,6 @@
     "images/categories.png",
     "images/404.jpg",
     "images/search.png",
-    "images/reverie-demo.png",
-    "_posts/2024-3-6-88x31 banners from the old net.md"
+    "images/reverie-demo.png"
   ]
 }
