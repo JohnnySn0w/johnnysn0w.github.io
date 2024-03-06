@@ -33,7 +33,7 @@ This would not be something one could throw a web app together for, and expect t
 
 No, even if I just run this process for one single image, say, one of the static 88x31 buttons, it takes up a bit of space in a number of ways, as seen in the stats for the final product:
 ![[Pasted image 20240306151927.png]]
-that is a big video!
+that is a big video! (but actually just 9MB)
 
 I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes, so not near as much RAM) into one pageview
 
@@ -42,7 +42,9 @@ Gif format would also have probably been a bad idea, I just don't think most gif
 Here's the nitty gritty of the technical:
 
 - one script, `gen_means.py`, converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
-	- As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the rgb of the pixel to the mean rgb of the banner.
-	- For Animated banners, I take the mean of each frame, and then generated a mean of those means for the overall image.
-	- What's flashy? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
-	- 
+	- As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the RGB of the pixel to the mean RGB of the banner.
+	- For Animated banners, I take the mean of each frame, and then generate a mean of those means for the overall image.
+	- What's 'flashy'? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
+	- Here's an example of a 'flashy' banner
+		- ![[_hearts4_main_theq-fm.gif]]
+	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the geocities archive. That could be considered Future Work.
