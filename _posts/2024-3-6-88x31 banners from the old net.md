@@ -42,4 +42,4 @@ So I decided to instead do a video format. Gif format would also have probably b
 Here's the nitty gritty of the technical:
 
 - one script converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
-	- What's flashy? basically, on a 
+	- What's flashy? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculation a standard devi
