@@ -35,11 +35,14 @@ No, even if I just run this process for one single image, say, one of the static
 ![[Pasted image 20240306151927.png]]
 that is a big video!
 
-I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes) into one pageview
+I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes, so not near as much RAM) into one pageview
 
 Gif format would also have probably been a bad idea, I just don't think most gif renderers are capable of handling the task of an 8kpx wide image. So I decided to instead do a video format.
 
 Here's the nitty gritty of the technical:
 
-- one script converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
-	- What's flashy? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculation a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to)
+- one script, `gen_means.py`, converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
+	- As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the rgb of the pixel to the mean rgb of the banner.
+	- For Animated banners, I take the mean of each frame, and then generated a mean of those means for the overall image.
+	- What's flashy? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
+	- 
