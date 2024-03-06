@@ -37,9 +37,9 @@ that is a big video!
 
 I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes) into one pageview
 
-So I decided to instead do a video format. Gif format would also have probably been a bad idea, I just don't think most gif renderers are capable of handling the task of an 8kpx wide image.
+Gif format would also have probably been a bad idea, I just don't think most gif renderers are capable of handling the task of an 8kpx wide image. So I decided to instead do a video format.
 
 Here's the nitty gritty of the technical:
 
 - one script converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
-	- What's flashy? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculation a standard devi
+	- What's flashy? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculation a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to)
