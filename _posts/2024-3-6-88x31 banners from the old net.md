@@ -14,4 +14,4 @@ Yes, the user posting it had gone through and scraped the Geocities backup for a
 
 That, in combination with a Youtube video I recently keyed onto, about the [creator's love of really obscure art](https://www.youtube.com/watch?v=d_n_gmINZTI), inspired me to try and do something, well, artsy! I too absolutely adore the way that some artists really dig into, trying to make art that is not only expressive, but is so on multiple levels, and isn't afraid to transgress socially acceptable aesthetics to make something that really evokes the kind of vibe they're going for. I mention in my About page, I love niche indies that speak to a specific person's life experience. I love art that is so very much about itself and nothing else.
 
-Taking inspiration from maximalist ideas, and the general vibe of early internet aesthetics, I spent the entirety of yesterday-sans the runtime of The Beautiful Bones, which I watched with a friend-
+Taking inspiration from maximalist ideas, and the general vibe of early internet aesthetics, I spent the entirety of yesterday—sans the runtime of The Beautiful Bones, which I watched with a friend—working on this proje
