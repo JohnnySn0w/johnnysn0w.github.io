@@ -3,6 +3,8 @@ layout: post
 title: 88x31 Banners from the old Net
 categories:
   - Projects
+  - Movies
+  - Media opinions
 ---
 
 
@@ -12,4 +14,4 @@ Yes, the user posting it had gone through and scraped the Geocities backup for a
 
 That, in combination with a Youtube video I recently keyed onto, about the [creator's love of really obscure art](https://www.youtube.com/watch?v=d_n_gmINZTI), inspired me to try and do something, well, artsy!
 
-Taking inspiration from maximalist ideas, and the general vibe of 
+Taking inspiration from maximalist ideas, and the general vibe of early internet aesthetics, I spent the entirety of yesterday (sans the runtime of The Beautiful Bones, which I watched with a friend) 
