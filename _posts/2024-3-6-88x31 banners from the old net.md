@@ -41,5 +41,5 @@ So I decided to instead do a video format. Gif format would also have probably b
 
 Here's the nitty gritty of the technical:
 
-- one script converts every banner in the archive to an entry in a csv. This csv has the following header structure:
-	- 
+- one script converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
+	- What's flashy? basically, on a 
