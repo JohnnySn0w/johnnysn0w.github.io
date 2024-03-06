@@ -25,9 +25,9 @@ So yeah! The project was almost fully formed but here's the gist I sent to a fri
 Let me be more concise though:
 >For any given input image, convert each single pixel of that image into a RGB value, and swap it with a 88x31px banner whose RGB color mean is nearest that value.
 
-Now, I later found that using others sites for cdn, is:
+Now, I later found that using others sites for CDN, is:
 
-1. Known as hot linking, and is very frowned upon, because you're driving up costs for the hoster.
+1. Known as [hot linking](https://en.wikipedia.org/wiki/Inline_linking), and is very frowned upon, because you're driving up costs for the hoster.
 2. Not as much of a crime if you're using a corpo for it
 
 And also, I eventually realized the sheer magnitude of the task, computationally.
@@ -49,7 +49,7 @@ Here's the nitty gritty of the technical:
 	- For Animated banners, I take the mean of each frame, and then generate a mean of those means for the overall image.
 	- What's 'flashy'? Basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
 	- Here's an example of a 'flashy' banner
-		- ![[_hearts4_main_theq-fm.gif]]
+		- ![a flashy banner](/images/_hearts4_main_theq-fm.gif)
 	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the Geocities archive. That could be considered Future Work.
 
 One of the more interesting aspects of parsing all these files, was finding that some of them are [zip bombs](https://en.wikipedia.org/wiki/Zip_bomb), in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS` value too high. Basically, the library I used to parse the images, [Pillow](https://pillow.readthedocs.io/en/stable/), has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
