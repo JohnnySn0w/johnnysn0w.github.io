@@ -18,9 +18,11 @@ Taking inspiration from maximalist ideas, and the general vibe of early internet
 
 Being unemployed has perks, ahaha
 
+I will be very clear, in that I was fairly heavily assisted by the Robot in this endeavor. Otherwise, I very much doubt I could have worked with these unfamiliar image libraries so quickly.
+
 So yeah! The project was almost fully formed but here's the gist I sent to a friend:
 
-![[Pasted image 20240306151532.png]]
+![me gisting in discord](/images/Pasted%20image%2020240306151532.png)
 
 Let me be more concise though:
 >For any given input image, convert each single pixel of that image into a RGB value, and swap it with a 88x31px banner whose RGB color mean is nearest that value.
@@ -35,7 +37,7 @@ And also, I eventually realized the sheer magnitude of the task, computationally
 This would not be something one could throw a web app together for, and expect to be able to dynamically render on a webpage. That was my first idea for the end product, you see.
 
 No, even if I just run this process for one single image, say, one of the static 88x31 buttons, it takes up a bit of space in a number of ways, as seen in the stats for the final product:
-![[Pasted image 20240306151927.png]]
+![final video dimensions](/images/Pasted%20image%2020240306151927.png)
 that is a big video! (but actually just 9MB)
 
 I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes, so not near as much RAM) into one pageview
@@ -68,4 +70,6 @@ For the final script, the following technical details arise:
 Closing thoughts
 - Might finagle alpha channel back in. I just wanted to simplify things for the first go. There are some pretty heavily transparent banners, so they're certainly available for the palette.
 - I half wanted to dive into computational shader development for this. I still might, that would go under Future Work though.
+- This was really fun, I haven't really done generative art in a while.
+- I came out of this realizing how much AI can help, but also how much it takes away in the feeling of the creative effort. For other projects, I will likely be using it more minimally. 
 
