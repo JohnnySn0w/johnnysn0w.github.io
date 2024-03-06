@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 88x31 Banners from the old Net
+title: 88x31 Banners from the old Net, an Art Project
 categories:
   - Projects
   - Movies
@@ -52,7 +52,11 @@ Here's the nitty gritty of the technical:
 		- ![[_hearts4_main_theq-fm.gif]]
 	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the geocities archive. That could be considered Future Work.
 
-One of the more interesting aspects of parsing all these files, was finding that some of them are zip bombs, in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS = 1000000000` value too high. Basically, the library I used to parse the images, Pillow, has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
+One of the more interesting aspects of parsing all these files, was finding that some of them are zip bombs, in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS` value too high. Basically, the library I used to parse the images, Pillow, has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
 
 I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES = True`, as otherwise some of the banners wouldn't be parsed. This is an interesting side effect of the optimizations various programs would use in the era, to optimize for size. Unfortunately, I have yet to find a solution to all of the various curveballs these optimizations are throwing me. Lots of out-of-bounds errors when copying individual frames for final video composition.
+
+After the means are recorded to file, I then run another script, one that runs through an inputted image, and generates a mapping csv, one filename per pixel coordinate, in the form of `columns=['x', 'y', 'func_result']`, where func_result is the filename of the nearest(euclidian) banner to the pixel. 
+
+Finally, there's a third script that takes that csv, and performs the marriage of the images into frames, and from frames into video. 
 
