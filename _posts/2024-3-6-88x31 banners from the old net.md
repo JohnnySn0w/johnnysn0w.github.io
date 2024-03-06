@@ -65,7 +65,7 @@ Finally, there's a third script that takes that csv, and performs the marriage o
 For the final script, the following technical details arise:
 - If you're making a looped video, it should loop everything in a nice, clean way. This means the frames need to somehow line up all the different framerates of the gifs.
 - I still need the dimensions of the image that was parsed as input, currently I don't have that information fed in dynamically. Semi-easy fix once the scripts are chained in a more formal manner.
-- Working with small image inputs is best. I don't even know if the system as is could handle something even normal size 
+- Working with small image inputs is best. I don't even know if the system as is could handle something even normal size, like 400x400.
 
 
 Closing thoughts
