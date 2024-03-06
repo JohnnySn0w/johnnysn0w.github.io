@@ -48,3 +48,7 @@ Here's the nitty gritty of the technical:
 	- Here's an example of a 'flashy' banner
 		- ![[_hearts4_main_theq-fm.gif]]
 	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the geocities archive. That could be considered Future Work.
+
+One of the more interesting aspects of parsing all these files, was finding that some of them are zip bombs, in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS = 1000000000` value too high. Basically, the library I used to parse the images, Pillow, has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
+
+I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES = True`, as otherwise some of the banners wouldn't be parsed. This is an interesting side effect of the optimizations various programs would use in the era, to optimize for size. 
