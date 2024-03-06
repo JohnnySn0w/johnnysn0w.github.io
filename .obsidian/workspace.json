@@ -21,24 +21,16 @@
             "id": "7e67788f68021eb6",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "assets/Pasted image 20240306151532.png"
-              }
-            }
-          },
-          {
-            "id": "e80513657b8f54ac",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "images/favicon-32x32.png"
+                "file": "404.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "images/favicon-32x32.png",
+                "file": "404.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "images/favicon-32x32.png",
+                "file": "404.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "images/favicon-32x32.png"
+                "file": "404.md"
               }
             }
           }
@@ -165,21 +157,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e80513657b8f54ac",
+  "active": "7e67788f68021eb6",
   "lastOpenFiles": [
-    "images/galaxy.jpg",
+    "README.md",
+    "404.md",
     "images/favicon-32x32.png",
+    "assets/Pasted image 20240306151532.png",
+    "images/reverie.png",
     "images/reverie-text.png",
+    "images/galaxy.jpg",
+    "images/mobile-demo.png",
     "images/categories.png",
     "images/404.jpg",
     "images/search.png",
-    "images/reverie.png",
     "images/reverie-demo.png",
-    "assets/Pasted image 20240306151927.png",
-    "assets/Pasted image 20240306151532.png",
     "_posts/2024-3-6-88x31 banners from the old net.md",
-    "assets/_hearts4_main_theq-fm.gif",
-    "_posts/2024-3-4-upcoming-things.md",
-    "404.md"
+    "_posts/2024-3-4-upcoming-things.md"
   ]
 }
