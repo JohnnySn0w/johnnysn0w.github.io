@@ -67,6 +67,9 @@ For the final script, the following technical details arise:
 - I still need the dimensions of the image that was parsed as input, currently I don't have that information fed in dynamically. Semi-easy fix once the scripts are chained in a more formal manner.
 - Working with small image inputs is best. I don't even know if the system as is could handle something even normal size, like 400x400.
 
+The input image:
+![](/assets/acraker2001_back_button.jpg)
+
 
 Closing thoughts
 - Might finagle alpha channel back in. I just wanted to simplify things for the first go. There are some pretty heavily transparent banners, so they're certainly available for the palette.
