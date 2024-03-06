@@ -35,4 +35,6 @@ No, even if I just run this process for one single image, say, one of the static
 ![[Pasted image 20240306151927.png]]
 that is a big video!
 
+I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes) into one pageview
 
+So 
