@@ -27,4 +27,8 @@ Now, I later found that using small sites for cdn, is:
 1. Known as hot linking, and is very frowned upon, because you're driving up costs for the hoster.
 2. Not as much of a crime if you're using a corpo for it
 
-And also, I 
+And also, I eventually realized the sheer magnitude of the task, computationally.
+
+This would not be something one could throw a web app together for, and expect to be able to dynamically render on a webpage. That was my first idea for the end product, you see.
+
+No, even if I jus
