@@ -58,5 +58,13 @@ I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES =
 
 After the means are recorded to file, I then run another script, one that runs through an inputted image, and generates a mapping csv, one filename per pixel coordinate, in the form of `columns=['x', 'y', 'func_result']`, where `func_result` is the filename of the nearest(Euclidian) banner to the pixel. 
 
-Finally, there's a third script that takes that csv, and performs the marriage of the images into frames, and from frames into video. This one breaks the most, and is where I'm left squashing the most bugs. 
+Finally, there's a third script that takes that csv, and performs the marriage of the images into frames, and from frames into video. This one breaks the most, and is where I'm left squashing the most bugs. As I said before, many of the issues come from optimizations. A browser life Firefox can handle these fine, as can some of my system image viewers, but Pillow simply isn't having it! I'll have to get more creative in how I'm parsing frames.
+
+For the final script, the following technical details arise:
+- If you're making a looped video, it should loop everything in a nice, clean way. This means the frames need to somehow line up all the different framerates of the gifs. 
+
+
+Closing thoughts
+- Might finagle alpha channel back in. I just wanted to simplify things for the first go. There are some pretty heavily transparent banners, so they're certainly available for the palette.
+- I half wanted to dive into computational shader development for this. I still might, that would go under Future Work though.
 
