@@ -25,7 +25,7 @@ So yeah! The project was almost fully formed but here's the gist I sent to a fri
 Let me be more concise though:
 >For any given input image, convert each single pixel of that image into a RGB value, and swap it with a 88x31px banner whose RGB color mean is nearest that value.
 
-Now, I later found that using small sites for cdn, is:
+Now, I later found that using others sites for cdn, is:
 
 1. Known as hot linking, and is very frowned upon, because you're driving up costs for the hoster.
 2. Not as much of a crime if you're using a corpo for it
@@ -47,16 +47,16 @@ Here's the nitty gritty of the technical:
 - one script, `gen_means.py`, converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
 	- As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the RGB of the pixel to the mean RGB of the banner.
 	- For Animated banners, I take the mean of each frame, and then generate a mean of those means for the overall image.
-	- What's 'flashy'? basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
+	- What's 'flashy'? Basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
 	- Here's an example of a 'flashy' banner
 		- ![[_hearts4_main_theq-fm.gif]]
-	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the geocities archive. That could be considered Future Work.
+	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the Geocities archive. That could be considered Future Work.
 
-One of the more interesting aspects of parsing all these files, was finding that some of them are zip bombs, in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS` value too high. Basically, the library I used to parse the images, Pillow, has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
+One of the more interesting aspects of parsing all these files, was finding that some of them are [zip bombs](https://en.wikipedia.org/wiki/Zip_bomb), in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS` value too high. Basically, the library I used to parse the images, [Pillow](https://pillow.readthedocs.io/en/stable/), has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
 
-I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES = True`, as otherwise some of the banners wouldn't be parsed. This is an interesting side effect of the optimizations various programs would use in the era, to optimize for size. Unfortunately, I have yet to find a solution to all of the various curveballs these optimizations are throwing me. Lots of out-of-bounds errors when copying individual frames for final video composition.
+I also had to set a truncated image value on, `ImageFile.LOAD_TRUNCATED_IMAGES = True`, as otherwise some of the banners wouldn't be parsed. This is an interesting side effect of the optimizations various programs would use in the era, to optimize for size. Unfortunately, I have yet to find a solution to all of the various curveballs these optimizations are throwing me. Lots of out-of-bounds errors when copying individual frames for final video composition. I've been glancing at hex by dropping them into [cyberchef](https://gchq.github.io/CyberChef/). I can't say I've learned a lot, but it's been interesting to really see how messy some of these files are.
 
-After the means are recorded to file, I then run another script, one that runs through an inputted image, and generates a mapping csv, one filename per pixel coordinate, in the form of `columns=['x', 'y', 'func_result']`, where func_result is the filename of the nearest(euclidian) banner to the pixel. 
+After the means are recorded to file, I then run another script, one that runs through an inputted image, and generates a mapping csv, one filename per pixel coordinate, in the form of `columns=['x', 'y', 'func_result']`, where `func_result` is the filename of the nearest(Euclidian) banner to the pixel. 
 
-Finally, there's a third script that takes that csv, and performs the marriage of the images into frames, and from frames into video. 
+Finally, there's a third script that takes that csv, and performs the marriage of the images into frames, and from frames into video. This one breaks the most, and is where I'm left squashing the most bugs. 
 
