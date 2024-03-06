@@ -31,10 +31,10 @@ And also, I eventually realized the sheer magnitude of the task, computationally
 
 This would not be something one could throw a web app together for, and expect to be able to dynamically render on a webpage. That was my first idea for the end product, you see.
 
-No, even if I just run this process for one single image, say, one of the static 88x31 buttons, it takes up a bit of space in a number of ways:
+No, even if I just run this process for one single image, say, one of the static 88x31 buttons, it takes up a bit of space in a number of ways, as seen in the stats for the final product:
 ![[Pasted image 20240306151927.png]]
 that is a big video!
 
 I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes) into one pageview
 
-So 
+So I decided to instead do a video format. Gif format would also have probably been a bad idea, I just don't think most gif renderers are capable of handling the task of an 8kpx wide image.
