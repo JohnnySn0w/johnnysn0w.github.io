@@ -47,11 +47,12 @@ Gif format would also have probably been a bad idea, I just don't think most gif
 Here's the nitty gritty of the technical:
 
 One script, `gen_means.py`, converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
-	- As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the RGB of the pixel to the mean RGB of the banner.
+
+- As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the RGB of the pixel to the mean RGB of the banner.
 	- For Animated banners, I take the mean of each frame, and then generate a mean of those means for the overall image.
 	- What's 'flashy'? Basically, a good many of the banners are animated. Of those animations, I wanted to be able to filter out ones that had a high amount of statistical variation between frames. This comes out to calculating a standard deviation value, and then checking it against a semi-arbitrary(read: magic number I heuristically came to) of how big the stddev needed to be for a gif to be 'flashy'. 
 	- Here's an example of a 'flashy' banner
-		- ![a flashy banner](/assets/banner.gif)
+	 ![a flashy banner](/assets/banner.gif)
 	- The nice thing is, this script need only be run the one time, since this is a static dataset. Now, there is certainly room to consider that banners of this sizing exist and continue to be made, outside of the Geocities archive. That could be considered Future Work.
 
 One of the more interesting aspects of parsing all these files, was finding that some of them are [zip bombs](https://en.wikipedia.org/wiki/Zip_bomb), in effect, and at least one, for actual. I watched my python process consume almost 10gigs of RAM trying to parse them when I set the protective `Image.MAX_IMAGE_PIXELS` value too high. Basically, the library I used to parse the images, [Pillow](https://pillow.readthedocs.io/en/stable/), has a safeguard that pops a `DecompressionBombError` if it's beyond the maximum allowed pixels. I did make my max bigger than the default the library comes with, and at higher values than the current one, at least one gif is waybig.
@@ -67,8 +68,14 @@ For the final script, the following technical details arise:
 - I still need the dimensions of the image that was parsed as input, currently I don't have that information fed in dynamically. Semi-easy fix once the scripts are chained in a more formal manner.
 - Working with small image inputs is best. I don't even know if the system as is could handle something even normal size, like 400x400.
 
+
+## Final Results
 The input image:
 ![](/assets/acraker2001_back_button.jpg)
+
+
+The output video:
+![](/assets/output_video.mp4)
 
 
 Closing thoughts
