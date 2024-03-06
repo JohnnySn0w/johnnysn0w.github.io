@@ -38,3 +38,8 @@ that is a big video!
 I think, though I didn't try, my browser would chug if I tried to pull that many images(despite many dupes) into one pageview
 
 So I decided to instead do a video format. Gif format would also have probably been a bad idea, I just don't think most gif renderers are capable of handling the task of an 8kpx wide image.
+
+Here's the nitty gritty of the technical:
+
+- one script converts every banner in the archive to an entry in a csv. This csv has the following header structure:
+	- 
