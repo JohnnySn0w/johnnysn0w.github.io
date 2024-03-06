@@ -30,7 +30,7 @@ Let me be more concise though:
 Now, I later found that using others sites for CDN, is:
 
 1. Known as [hot linking](https://en.wikipedia.org/wiki/Inline_linking), and is very frowned upon, because you're driving up costs for the hoster.
-2. Not as much of a crime if you're using a corpo for it
+2. Not as much of a crime if you're using a corpo for it.
 
 And also, I eventually realized the sheer magnitude of the task, computationally.
 
@@ -44,8 +44,9 @@ I think, though I didn't try, my browser would chug if I tried to pull that many
 
 Gif format would also have probably been a bad idea, I just don't think most gif renderers are capable of handling the task of an 8kpx wide image. So I decided to instead do a video format.
 
-Here's the nitty gritty of the technical:
+Let's move to the nitty gritty of the technical.
 
+## The Technical
 One script, `gen_means.py`, converts every banner in the archive to an entry in a csv. This csv has the following header structure: `headers = ['Image Name', 'Flashy', 'Mean Red', 'Mean Green', 'Mean Blue']`
 
 - As stated before, I wanted to generate the mean of each banner, the RGB mean. This would later be useful in finding the pixel to banner mapping, using [euclidian distance](https://en.wikipedia.org/wiki/Euclidean_distance) for the RGB of the pixel to the mean RGB of the banner.
@@ -75,9 +76,9 @@ The input image:
 
 
 The output video:
-
+(This does not work on Firefox for some reason)
 <video width="100%" height="auto" controls><source src="https://raw.githubusercontent.com/JohnnySn0w/8831-collager/main/output_video.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
-Closing thoughts
+### Closing thoughts
 - Might finagle alpha channel back in. I just wanted to simplify things for the first go. There are some pretty heavily transparent banners, so they're certainly available for the palette.
 - I half wanted to dive into computational shader development for this. I still might, that would go under Future Work though.
 - This was really fun, I haven't really done generative art in a while.
