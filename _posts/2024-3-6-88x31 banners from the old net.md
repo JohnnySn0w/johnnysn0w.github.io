@@ -24,5 +24,7 @@ So yeah! The project was almost fully formed but here's the gist:
 
 Now, I later found that using small sites for cdn, is:
 
-1. Known as hot linking, and is very frowned upon
-2. Not as much of a crime if you're using  a
+1. Known as hot linking, and is very frowned upon, because you're driving up costs for the hoster.
+2. Not as much of a crime if you're using a corpo for it
+
+And also, I 
