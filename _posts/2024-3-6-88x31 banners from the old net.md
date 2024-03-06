@@ -31,4 +31,4 @@ And also, I eventually realized the sheer magnitude of the task, computationally
 
 This would not be something one could throw a web app together for, and expect to be able to dynamically render on a webpage. That was my first idea for the end product, you see.
 
-No, even if I jus
+No, even if I just run this process for one single image, say, one of the static 88x31 buttons, it takes up a
