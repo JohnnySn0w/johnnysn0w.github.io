@@ -75,6 +75,10 @@ For the final script, the following technical details arise:
 - Have gotten it working completely. Had to set a section that creates downscaled images, basically, by dividing the max (8k) resolution by the banner sizes, I can get the max height and width of a base image to process. If an image is above either of these calc'd dimensions, I can generate a whole integer ratio to downscale it.
 - Using the downscaled image, the max RAM usage is ~3gigs
 - Going to call it for the night, but later I want to make the user interface smoother
+#### 10pm
+- i lied
+- still here,
+- trying to parallelize via multiprocessing. Had a memory error, looking into using shared memory bc it looked fine at the beginning, and I know I have the RAM for the base process.
 
 ## Final Results
 The input image:
