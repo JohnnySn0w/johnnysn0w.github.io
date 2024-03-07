@@ -73,7 +73,8 @@ For the final script, the following technical details arise:
 - A fun error here, is with images just too large, it'll generate a canvas size that ffmpeg refuses to operate on. I didn't even realize there were technical limits on video size. ![](/assets/Pasted%20image%2020240306194035.png)
 #### 9:30pm
 - Have gotten it working completely. Had to set a section that creates downscaled images, basically, by dividing the max (8k) resolution by the banner sizes, I can get the max height and width of a base image to process. If an image is above either of these calc'd dimensions, I can generate a whole integer ratio to downscale it.
-- using the downscaled image, the max RAM usage is ~3gigs
+- Using the downscaled image, the max RAM usage is ~3gigs
+- Going to call it for the night, but later I want to make the user interface smoother
 
 ## Final Results
 The input image:
