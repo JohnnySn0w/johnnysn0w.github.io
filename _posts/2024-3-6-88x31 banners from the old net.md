@@ -79,6 +79,7 @@ For the final script, the following technical details arise:
 - i lied
 - still here,
 - trying to parallelize via multiprocessing. Had a memory error, looking into using shared memory bc it looked fine at the beginning, and I know I have the RAM for the base process.
+- currently takes lik 6-7 minutes to process a video
 - yeah actually goodnight
 
 ## Final Results
