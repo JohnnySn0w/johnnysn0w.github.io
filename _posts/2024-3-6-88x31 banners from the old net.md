@@ -68,7 +68,7 @@ For the final script, the following technical details arise:
 - If you're making a looped video, it should loop everything in a nice, clean way. This means the frames need to somehow line up all the different framerates of the gifs.
 - I still need the dimensions of the image that was parsed as input, currently I don't have that information fed in dynamically. Semi-easy fix once the scripts are chained in a more formal manner.
 - Working with small image inputs is best. I don't even know if the system as is could handle something even normal size, like 400x400.
-
+- A fun error here, is with images just too large, it'll generate a canvas size that ffmpeg refuses to operate on. I didn't even realize there were technical limits on video size. ![](/assets/Pasted%20image%2020240306194035.png)
 
 ## Final Results
 The input image:
