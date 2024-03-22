@@ -16,7 +16,7 @@ These are include but are not limited to:
 
 ### More Information
 
-My background is certainly a thing.
+Both my undergraduate and graduate degrees are in the field of Computer Science. I have been a lifelong enthusiast of computers, and have a background originally in IT support. For my Masters thesis, I applied ransomware samples to VR headsets. I have spent some time in my education developing theory on reverse engineering. I am familiar with web development, via Python backends and JavaScript frontends. I have also interacted with various SQL-style databases, and some non-relational databases such as MongoDB and DynamoDB. I have spent many years using Unix and Unix-like systems, such as Linux and OSX. I regularly use BASH scripting to accommodate my goals at and away from work. I have spent some time doing embedded C work, predominantly for a IoT medical device at a YC startup. I also dabble in many other fields, but would not particularly consider myself well-versed in them, it's mostly for fun. This includes psychology, biology, philosophy, and esoterica (the weird, the mystical, and the occult). We'll call all that about 5 years of work experience, and many more in formal and informal schooling. 
 
 #### Academics
 B.Sc, M.Sc - Computer Science
